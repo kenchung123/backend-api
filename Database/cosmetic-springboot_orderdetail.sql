@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: cosmetic-springboot
+-- ------------------------------------------------------
+-- Server version	8.0.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `orderdetail`
+--
+
+DROP TABLE IF EXISTS `orderdetail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orderdetail` (
+  `orderdeatil_id` int NOT NULL AUTO_INCREMENT,
+  `price` bigint DEFAULT NULL,
+  `quantity` bigint DEFAULT NULL,
+  `order_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL,
+  PRIMARY KEY (`orderdeatil_id`),
+  KEY `FKfxkmvpbfxqect54pd7slj4ll9` (`order_id`),
+  KEY `FKdubukg3j0fymgci0idnd72k0` (`product_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=199 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orderdetail`
+--
+
+LOCK TABLES `orderdetail` WRITE;
+/*!40000 ALTER TABLE `orderdetail` DISABLE KEYS */;
+INSERT INTO `orderdetail` VALUES (182,360000,2,158,5),(181,360000,2,157,4),(180,360000,2,156,5),(194,405000,1,163,3),(193,360000,1,163,4),(192,360000,4,162,4),(191,360000,4,162,5),(190,160000,2,161,10),(189,360000,1,161,5),(188,360000,1,161,6),(187,400000,3,160,7),(186,360000,2,159,6),(185,360000,2,159,5),(184,405000,3,159,3),(183,360000,4,158,6),(195,360000,1,164,5),(196,360000,1,165,4),(197,360000,2,166,4),(198,360000,1,166,6);
+/*!40000 ALTER TABLE `orderdetail` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-11-01  0:01:29
